@@ -1,0 +1,72 @@
+*{
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+}
+/* боковая панель: данные о пользователе*/
+.account_ava{
+    display: flex;
+    background-color:rgba(0, 0, 0, 0.085);
+}
+.user_avatar{
+    display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+.user_avatar img{
+    width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.data_user{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.notifications img{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px; 
+}
+/*боковая панель: Данные о задачах*/
+.aside_main{
+    margin-left: 15px;
+}
+.text_user_task{
+    margin-top: 20px;
+    font-size: 14px;
+}
+.user_task{
+    margin-top: 10px;
+}
+.task{
+    display: flex;
+}
+.data_task{
+    background-color:rgba(188, 255, 255, 1) ;
+    border-radius: 15px;
+}
+.name_project_task{
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(151, 63, 207, 1);
+}
+.name_task{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.501);
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.about_task{
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
