@@ -2,10 +2,17 @@
     text-decoration: none;
     font-family: "Outfit", sans-serif;
 }
+.main_page{
+    display: flex;
+}
 /* боковая панель: данные о пользователе*/
+.aside{
+    width: 25%;
+}
 .account_ava{
     display: flex;
     background-color:rgba(0, 0, 0, 0.085);
+    border-radius: 5px;
 }
 .user_avatar{
     display: inline-block;
@@ -23,6 +30,10 @@
 .data_user{
     margin-left: 10px;
     margin-top: 10px;
+}
+.notifications{
+    margin-left: auto;
+    margin-right: 15px;
 }
 .notifications img{
     margin-left: 10px;
@@ -43,15 +54,18 @@
 }
 .task{
     display: flex;
+    align-items: center;
 }
 .data_task{
     background-color:rgba(188, 255, 255, 1) ;
     border-radius: 15px;
+    margin-left: 10px;
 }
 .name_project_task{
     margin-top: 5px;
     margin-left: 20px;
-    margin-right: 20px;
+    padding: 2px;
+    width: 50%;
     border-radius: 5px;
     text-align: center;
     font-size: 14px;
@@ -69,4 +83,82 @@
     margin-top: 5px;
     margin-left: 20px;
     color: rgba(0, 0, 0, 0.7);
+}
+.status_task{
+    display: flex;
+    margin-left: 20px;
+    font-size: 10px;
+    margin-top: 30px;
+}
+.complexity{
+    color: rgba(255, 165, 0, 1);
+    background-color: rgba(255, 165, 0, 0.15) ;
+    padding: 4px;
+    border-radius: 5px;
+}
+.status{
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 4px;
+    color: rgba(207, 107, 197, 1);
+    background-color: rgba(223, 73, 208, 0.42);
+}
+.details_task{
+    display: flex;
+    margin-top: 10px;
+    font-size: 11px;
+    margin-left: 15px;
+}
+.details_task img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.comment_task{
+    display: flex;
+}
+.file_task{
+    display: flex;
+    margin-right: 10px;
+}
+/*рабочая зона приложения*/
+.work_zona{
+    background-color:rgba(0, 0, 0, 0.085);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.nav_ticket{
+    display: flex;
+}
+.ticket{
+    display: flex;
+    padding: 10px;
+}
+.tasks{
+    padding: 10px;
+}
+.projects{
+    padding: 10px;
+}
+.report{
+    padding: 10px;
+}
+.add_task{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: 15px;
+    background-color: rgba(68, 131, 247, 1);
+    color: white;
+}
+.task_table{
+    display: flex;
+    margin-right:10px ;
+}
+.progres_bar{
+    margin-top: 15px;
+    margin-left: 10px;
 }
