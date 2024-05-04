@@ -1,0 +1,103 @@
+{% extends 'main.html' %}
+{% block link%}<link rel="stylesheet" href="static/css/profile.css">{% endblock%}
+
+{% block title %}IT-planer{% endblock %}
+{% block body %}
+
+    <div class="progres_bar">
+        <progress value="70" max="100">70 %</progress>
+    </div>
+    <div class="task_table">
+        <div class="done">
+            <div class="data_task">
+                <div class="name_project_task">
+                    Имя проекта
+                </div>
+                <div class="name_task">
+                    Имя задачи
+                </div>
+                <div class="about_task">
+                    Описание задачи
+                </div>
+                <div class="status_task">
+                    <div class="complexity">Легко</div>
+                    <div class="status">В процессе</div>
+                </div>
+                <div class="details_task">
+                    <div class="fio_teamled">
+                        Малыгин Д.В.
+                    </div>
+                    <div class="comment_task">
+                        <img src="../static/img/comments.png" alt="">
+                        <div class="amount_comments"> 0 комметариев</div>
+                    </div>
+                    <div class="file_task">
+                        <img src="../static/img/file.png" alt="">
+                        <div class="amount_files"> 0 файлов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="in_progress">
+            <div class="data_task">
+                <div class="name_project_task">
+                    Имя проекта
+                </div>
+                <div class="name_task">
+                    Имя задачи
+                </div>
+                <div class="about_task">
+                    Описание задачи
+                </div>
+                <div class="status_task">
+                    <div class="complexity">Легко</div>
+                    <div class="status">В процессе</div>
+                </div>
+                <div class="details_task">
+                    <div class="fio_teamled">
+                        Малыгин Д.В.
+                    </div>
+                    <div class="comment_task">
+                        <img src="../static/img/comments.png" alt="">
+                        <div class="amount_comments"> 0 комметариев</div>
+                    </div>
+                    <div class="file_task">
+                        <img src="../static/img/file.png" alt="">
+                        <div class="amount_files"> 0 файлов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="to_be_done">
+            <div class="data_task">
+                <div class="name_project_task">
+                    Имя проекта
+                </div>
+                <div class="name_task">
+                    Имя задачи
+                </div>
+                <div class="about_task">
+                    Описание задачи
+                </div>
+                <div class="status_task">
+                    <div class="complexity">Легко</div>
+                    <div class="status">В процессе</div>
+                </div>
+                <div class="details_task">
+                    <div class="fio_teamled">
+                        Малыгин Д.В.
+                    </div>
+                    <div class="comment_task">
+                        <img src="../static/img/comments.png" alt="">
+                        <div class="amount_comments"> 0 комметариев</div>
+                    </div>
+                    <div class="file_task">
+                        <img src="../static/img/file.png" alt="">
+                        <div class="amount_files"> 0 файлов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
