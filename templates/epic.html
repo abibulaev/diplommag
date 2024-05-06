@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block link%}
+<link rel="stylesheet" href="../static/css/epic.css">
+{% endblock%}
+
+{% block title %}IT-planer{% endblock %}
+{% block body %}
+<div class="work_zona_epic">
+    <div class="progres_bar">
+        <progress value="70" max="100">70 %</progress>
+    </div>
+    <div class="epic_table">
+        <div class="epic_table_name">
+            Название цели
+        </div>
+        <div class="about_epic_table">
+            Описание цели
+        </div>
+        <div class="epic_status">
+            <div class="epic_progress">
+                <progress value="70" max="100">70 %</progress>
+            </div>
+            <div class="epic_value">
+                7/10
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

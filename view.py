@@ -8,3 +8,7 @@ def main():
 @app.route('/tasktable',methods=['GET', 'POST'])
 def tasktable():
     return render_template("tasktable.html")
+
+@app.route("/epictable",methods=['GET', 'POST'])
+def epictaable():
+    return render_template("epic.html")

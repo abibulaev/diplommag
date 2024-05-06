@@ -1,0 +1,43 @@
+.work_zona_epic{
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 851px;
+}
+.progres_bar{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.epic_table{
+    background-color:rgba(188, 255, 255, 1) ;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.epic_table_name{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.about_epic_table{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.epic_status{
+    margin-left: 20px;
+    display: flex;
+}
+.epic_progress{
+    padding: 5px;
+}
+.epic_value{
+    padding: 5px;
+    font-size: 12px;
+}
+
+
+

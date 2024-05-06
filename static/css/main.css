@@ -56,6 +56,75 @@
     display: flex;
     align-items: center;
 }
+/* выполненые задачи*/
+.data_task_d{
+    background-color:rgba(188, 255, 255, 1) ;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.name_project_task_d{
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 2px;
+    width: 50%;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgb(30, 62, 204);
+}
+.name_task_d{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.501);
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.about_task_d{
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.status_task_d{
+    display: flex;
+    margin-left: 20px;
+    font-size: 10px;
+    margin-top: 30px;
+}
+.complexity_d{
+    color: rgba(255, 165, 0, 1);
+    background-color: rgba(255, 165, 0, 0.15) ;
+    padding: 4px;
+    border-radius: 5px;
+}
+.status_d{
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 4px;
+    color: rgb(37, 110, 18);
+    background-color: rgb(79, 243, 38);
+}
+.details_task_d{
+    display: flex;
+    margin-top: 10px;
+    font-size: 11px;
+    margin-left: 15px;
+}
+.details_task_d img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.comment_task_d{
+    display: flex;
+}
+.file_task_d{
+    display: flex;
+    margin-right: 10px;
+}
+/* задчи в процессе*/
 .data_task{
     background-color:rgba(188, 255, 255, 1) ;
     border-radius: 15px;
@@ -70,7 +139,7 @@
     border-radius: 5px;
     text-align: center;
     font-size: 14px;
-    background-color: rgba(151, 63, 207, 1);
+    background-color:rgb(30, 62, 204);
 }
 .name_task{
     font-size: 16px;
@@ -120,6 +189,74 @@
     display: flex;
 }
 .file_task{
+    display: flex;
+    margin-right: 10px;
+}
+/*поставленная задача*/
+.data_task_t{
+    background-color:rgba(188, 255, 255, 1) ;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.name_project_task_t{
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 2px;
+    width: 50%;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    background-color:rgb(30, 62, 204);
+}
+.name_task_t{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.501);
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.about_task_t{
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.status_task_t{
+    display: flex;
+    margin-left: 20px;
+    font-size: 10px;
+    margin-top: 30px;
+}
+.complexity_t{
+    color: rgba(255, 165, 0, 1);
+    background-color: rgba(255, 165, 0, 0.15) ;
+    padding: 4px;
+    border-radius: 5px;
+}
+.status_t{
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 4px;
+    color: rgba(179, 179, 179, 0.856);
+    background-color: rgba(179, 179, 179, 0.329);
+}
+.details_task_t{
+    display: flex;
+    margin-top: 10px;
+    font-size: 11px;
+    margin-left: 15px;
+}
+.details_task_t img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.comment_task_t{
+    display: flex;
+}
+.file_task_t{
     display: flex;
     margin-right: 10px;
 }
