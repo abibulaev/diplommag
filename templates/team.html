@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block link%}
+<link rel="stylesheet" href="../static/css/team.css">
+{% endblock%}
+
+{% block title %}IT-planer{% endblock %}
+{% block body %}
+<div class="team_table">
+    <div class="member_card">
+        <div class="member_card_img">
+            <img src="..//static/img/avatar_user.png" alt="">
+        </div>
+        <div class="member_card_data">
+            <div class="member_card_username">
+            Абибулаев Ленур Бахтиярович
+            </div>
+            <div class="member_card_job">
+            Должность
+            </div>
+        </div>
+        
+        <div class="member_card_progress_bar">
+            <progress value="70" max="100">70 %</progress>
+        </div>
+    </div>
+</div>
+{% endblock %}

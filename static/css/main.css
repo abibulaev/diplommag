@@ -33,13 +33,22 @@
 }
 .notifications{
     margin-left: auto;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 .notifications img{
-    margin-left: 10px;
+   
     margin-top: 10px;
     width: 25px;
     height: 25px; 
+}
+.logout{
+    margin-right: 15px; 
+}
+.logout img{
+    margin-top: 10px;
+    width: 25px;
+    height: 25px; 
+    
 }
 /*боковая панель: Данные о задачах*/
 .aside_main{
@@ -295,9 +304,11 @@
 }
 .task_table{
     display: flex;
-    margin-right:10px ;
+    margin-right:10px;
+    margin-left: 15px;
+    padding-bottom: 15px;
 }
 .progres_bar{
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
