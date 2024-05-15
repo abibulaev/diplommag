@@ -28,36 +28,33 @@
                     <img src="../static/img/logout.png" alt="">
                 </div>
             </div> 
-            <div class="aside_main">
+            <div class="sidebar">
+                <h2>Проекты</h2>
+                <ul>
+                    <li><a href="#">Проект 1</a></li>
+                    <li><a href="#">Проект 2</a></li>
+                    <li><a href="#">Проект 3</a></li>
+                    <li><a href="#">Проект 4</a></li>
+                    <li><a href="#">Проект 5</a></li>
+                </ul>
+            </div>
+            <!--<div class="aside_main">
                 <div class="text_user_task">Мои Проекты:</div>
                 <div class="user_task">
                     <div class="task">
-                        <div class="time_deadline">
-                            12:00
-                        </div>
                         <div class="data_task">
                             <div class="name_project_task">Имя проекта</div>
-                            <div class="name_task">Имя задачи</div>
-                            <div class="about_task">Описание задачи</div>
                             <div class="status_task">
-                                <div class="complexity">Легко</div>
-                                <div class="status">В процессе</div>
+                                <div class="complexity">Коллзадач</div>
+                                <div class="about_project_epic">Колл целей</div>
                             </div>
                             <div class="details_task">
-                                <div class="fio_teamled">Малыгин Д.В.</div>
-                                <div class="comment_task">
-                                    <img src="../static/img/comments.png" alt="">
-                                    <div class="amount_comments"> 0 комметариев</div>
-                                </div>
-                                <div class="file_task">
-                                    <img src="../static/img/file.png" alt="">
-                                    <div class="amount_files"> 0 файлов</div>
-                                </div>
+                                <progress value="70" max="100">70 %</progress>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="work_zona">
             <div class="nav_ticket">
@@ -67,7 +64,7 @@
                     <div class="report"><a href="/team">Команда</a></div>
                 </div>
                 <div class="add_task">
-                    Добавить задачу
+                    <a href="/addtask">Создать задачу</a>
                 </div>
             </div>
             {% block body %}

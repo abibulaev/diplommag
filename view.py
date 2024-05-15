@@ -16,3 +16,6 @@ def epictaable():
 @app.route('/team',methods=['GET', 'POST'])
 def team():
     return render_template("team.html")
+@app.route("/addtask", methods=['GET','POST'])
+def addtask():
+    return render_template("addtask.html")

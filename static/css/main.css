@@ -65,6 +65,14 @@
     display: flex;
     align-items: center;
 }
+.about_project_epic{
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 4px;
+    color: rgb(197, 103, 188);
+    background-color: rgba(223, 73, 208, 0.42);
+}
 /* выполненые задачи*/
 .data_task_d{
     background-color:rgba(188, 255, 255, 1) ;
@@ -311,4 +319,57 @@
 .progres_bar{
     margin-top: 15px;
     margin-left: 20px;
+}
+
+
+
+
+.sidebar {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.085);
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0135a5;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content h1 {
+    font-size: 28px;
+}
+
+.content p {
+    font-size: 18px;
 }
