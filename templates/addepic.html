@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block link%}
+<link rel="stylesheet" href="../static/css/addepic.css">
+{% endblock%}
+
+{% block title %}IT-planer{% endblock %}
+{% block body %}
+<div class="main-content">
+    <div class="goal-form">
+        <h1>Создание цели</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="goal-name">Название цели</label>
+                <input type="text" id="goal-name" name="goal-name" required>
+            </div>
+            <div class="form-group">
+                <label for="goal-description">Описание цели</label>
+                <textarea id="goal-description" name="goal-description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="goal-start-date">Дата начала</label>
+                <input type="date" id="goal-start-date" name="goal-start-date" required>
+            </div>
+            <div class="form-group">
+                <label for="goal-end-date">Срок выполнения</label>
+                <input type="date" id="goal-end-date" name="goal-end-date" required>
+            </div>
+            <button type="submit" class="submit-btn">Создать цель</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

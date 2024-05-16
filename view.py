@@ -19,3 +19,15 @@ def team():
 @app.route("/addtask", methods=['GET','POST'])
 def addtask():
     return render_template("addtask.html")
+
+@app.route("/taskcard", methods=['GET','POST'])
+def taskcard():
+    return render_template("taskcard.html")
+
+@app.route("/epiccard", methods=['GET','POST'])
+def epiccard():
+    return render_template("epiccard.html")
+
+@app.route("/addepic", methods=['GET','POST'])
+def addepic():
+    return render_template("addepic.html")

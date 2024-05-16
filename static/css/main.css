@@ -1,5 +1,6 @@
 *{
     text-decoration: none;
+    
     font-family: "Outfit", sans-serif;
 }
 .main_page{
@@ -285,12 +286,24 @@
 .report{
     padding: 10px;
 }
+.add_epic{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color:#333;;
+    color: white;
+}
+.add_epic a{
+    color: white;
+}
 .add_task{
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 15px;
-    margin-left: auto;
     margin-right: 15px;
     background-color:rgb(255, 225, 0);
     color: white;
@@ -350,7 +363,6 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     height: 100vh;
 }
@@ -413,7 +425,15 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
-
+.project_btn{
+    display: flex;
+}
+.project_btn a{
+    border: width 3px;
+    font-size: 24px;
+    border-color: #a58c01;
+    display: flex;
+}
 .sidebar h2 {
     font-size: 24px;
     margin-top: 0;
@@ -473,6 +493,7 @@ body {
     color: white;
     padding: 20px;
     box-sizing: border-box;
+    padding-bottom: 100%;
 }
 
 .user-panel {

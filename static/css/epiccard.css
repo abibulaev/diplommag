@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-details p {
+    margin: 0;
+}
+
+.notifications img {
+    width: 20px;
+    height: 20px;
+}
+
+.projects p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects ul li {
+    margin-bottom: 10px;
+    color: yellow;
+    cursor: pointer;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.create-task-btn {
+    padding: 10px 20px;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+}
+
+.goal-progress {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.goal-progress h1 {
+    margin-top: 0;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: yellow;
+    height: 100%;
+}
+
+.tasks-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-list h2 {
+    margin-top: 0;
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.task-item h3 {
+    margin-top: 0;
+}
+
+.task-item p {
+    margin: 5px 0;
+}

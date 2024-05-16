@@ -25,7 +25,10 @@
             <div class="aside">
             
                 <div class="sidebar_а">
-                    <h2>Проекты</h2>
+                    <div class="project_btn">
+                        <h2>Проекты</h2>
+                        <a href="/add_project">+</a>
+                    </div>
                     <ul>
                         <li><a href="#">Проект 1</a></li>
                         <li><a href="#">Проект 2</a></li>
@@ -44,6 +47,9 @@
                     <div class="projects"><a href="/epictable">Цели</a></div>
                     <div class="report"><a href="/team">Команда</a></div>
                 </div>
+                <div class="add_epic">
+                    <a href="/addepic">Создать цель</a>
+                </div>
                 <div class="add_task">
                     <a href="/addtask">Создать задачу</a>
                 </div>
@@ -52,10 +58,10 @@
             {% endblock %}
         </div>
     </div>
-        
-    
+    {%block content%}
+    {%endblock%}    
    
 </body>
-<script src="script.js"></script>
+<script src="../static/js/taskcard.js"></script>
 
 </html>
