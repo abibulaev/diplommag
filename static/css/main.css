@@ -51,28 +51,10 @@
     
 }
 /*боковая панель: Данные о задачах*/
-.aside_main{
-    margin-left: 15px;
-}
-.text_user_task{
-    margin-top: 20px;
-    font-size: 14px;
-}
-.user_task{
-    margin-top: 10px;
-}
-.task{
-    display: flex;
-    align-items: center;
-}
-.about_project_epic{
-    padding: 4px;
-    border-radius: 5px;
-    margin-left: 20px;
-    padding: 4px;
-    color: rgb(197, 103, 188);
-    background-color: rgba(223, 73, 208, 0.42);
-}
+
+
+
+
 /* выполненые задачи*/
 .data_task_d{
     background-color:rgba(188, 255, 255, 1) ;
@@ -320,10 +302,100 @@
     margin-top: 15px;
     margin-left: 20px;
 }
+/*таблица задач*/
+.progress-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    background-color: #28a745;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+.progress-percentage {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.column {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.column h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.task-card {
+    background-color: #e3e3e3;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-card h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.task-card p {
+    margin: 0;
+}
+
+.task-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
 
 
-
-
+/*боковая понель*/
 .sidebar {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.085);
@@ -372,4 +444,66 @@
 
 .content p {
     font-size: 18px;
+}
+/*панель пользователя*/
+/* styles.css */
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.user-panel {
+    display: flex;
+    align-items: center;
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user-id {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
 }

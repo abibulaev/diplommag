@@ -3,101 +3,67 @@
 
 {% block title %}IT-planer{% endblock %}
 {% block body %}
-
-    <div class="progres_bar">
-        <progress value="70" max="100">70 %</progress>
+<div class="progress-container">
+    <label for="progress-bar">Прогресс выполнения задач:</label>
+    <div class="progress-bar" id="progress-bar">
+        <div class="progress" style="width: 60%;"></div>
     </div>
-    <div class="task_table">
-        <div class="done">
-            <div class="data_task_d">
-                <div class="name_project_task_d">
-                Имя Эпика    
-                </div>
-                <div class="name_task_d">
-                    Имя задачи
-                </div>
-                <div class="about_task_d">
-                    Описание задачи
-                </div>
-                <div class="status_task_d">
-                    <div class="complexity_d">Легко</div>
-                    <div class="status_d">Готово</div>
-                </div>
-                <div class="details_task_d">
-                    <div class="fio_teamled_d">
-                        Малыгин Д.В.
-                    </div>
-                    <div class="comment_task_d">
-                        <img src="../static/img/comments.png" alt="">
-                        <div class="amount_comments_d"> 0 комметариев</div>
-                    </div>
-                    <div class="file_task_d">
-                        <img src="../static/img/file.png" alt="">
-                        <div class="amount_files_d"> 0 файлов</div>
-                    </div>
-                </div>
+    <span class="progress-percentage">60%</span>
+</div>
+<div class="board">
+    <div class="column">
+        <h2>В процессе</h2>
+        <div class="task-card">
+            <h3>Задача 1</h3>
+            <p>Описание задачи</p>
+            <div class="task-info">
+                <p><strong>Проект:</strong> Проект Alpha</p>
+                <p><strong>Важность:</strong> Высокая</p>
+                <p><strong>Исполнитель:</strong> Иванов Иван</p>
+                <p><strong>Комментарии:</strong> 3</p>
+                <p><strong>Файлы:</strong> 2</p>
             </div>
         </div>
-        <div class="in_progress">
-            <div class="data_task">
-                <div class="name_project_task">
-                    Имя Эпика   
-                </div>
-                <div class="name_task">
-                    Имя задачи
-                </div>
-                <div class="about_task">
-                    Описание задачи
-                </div>
-                <div class="status_task">
-                    <div class="complexity">Легко</div>
-                    <div class="status">В процессе</div>
-                </div>
-                <div class="details_task">
-                    <div class="fio_teamled">
-                        Малыгин Д.В.
-                    </div>
-                    <div class="comment_task">
-                        <img src="../static/img/comments.png" alt="">
-                        <div class="amount_comments"> 0 комметариев</div>
-                    </div>
-                    <div class="file_task">
-                        <img src="../static/img/file.png" alt="">
-                        <div class="amount_files"> 0 файлов</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="to_be_done">
-            <div class="data_task_t">
-                <div class="name_project_task_t">
-                    Имя Эпика   
-                </div>
-                <div class="name_task_t">
-                    Имя задачи
-                </div>
-                <div class="about_task_t">
-                    Описание задачи
-                </div>
-                <div class="status_task_t">
-                    <div class="complexity_t">Легко</div>
-                    <div class="status_t">Задача поставлена</div>
-                </div>
-                <div class="details_task_t">
-                    <div class="fio_teamled_t">
-                        Малыгин Д.В.
-                    </div>
-                    <div class="comment_task_t">
-                        <img src="../static/img/comments.png" alt="">
-                        <div class="amount_comments_t"> 0 комметариев</div>
-                    </div>
-                    <div class="file_task_t">
-                        <img src="../static/img/file.png" alt="">
-                        <div class="amount_files_t"> 0 файлов</div>
-                    </div>
-                </div>
+        <div class="task-card">
+            <h3>Задача 2</h3>
+            <p>Описание задачи</p>
+            <div class="task-info">
+                <p><strong>Проект:</strong> Проект Beta</p>
+                <p><strong>Важность:</strong> Средняя</p>
+                <p><strong>Исполнитель:</strong> Петров Петр</p>
+                <p><strong>Комментарии:</strong> 1</p>
+                <p><strong>Файлы:</strong> 0</p>
             </div>
         </div>
     </div>
+    <div class="column">
+        <h2>Готово</h2>
+        <div class="task-card">
+            <h3>Задача 3</h3>
+            <p>Описание задачи</p>
+            <div class="task-info">
+                <p><strong>Проект:</strong> Проект Gamma</p>
+                <p><strong>Важность:</strong> Низкая</p>
+                <p><strong>Исполнитель:</strong> Сидоров Сидор</p>
+                <p><strong>Комментарии:</strong> 0</p>
+                <p><strong>Файлы:</strong> 1</p>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <h2>В ожидании</h2>
+        <div class="task-card">
+            <h3>Задача 4</h3>
+            <p>Описание задачи</p>
+            <div class="task-info">
+                <p><strong>Проект:</strong> Проект Delta</p>
+                <p><strong>Важность:</strong> Высокая</p>
+                <p><strong>Исполнитель:</strong> Смирнов Смирн</p>
+                <p><strong>Комментарии:</strong> 2</p>
+                <p><strong>Файлы:</strong> 3</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
