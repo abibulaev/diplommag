@@ -273,6 +273,9 @@
     display: flex;
     padding: 10px;
 }
+.ticket a{
+    color: #333;
+}
 .tasks{
     padding: 10px;
 }
@@ -289,9 +292,16 @@
     border-radius: 15px;
     margin-left: auto;
     margin-right: 15px;
-    background-color: rgba(68, 131, 247, 1);
+    background-color:rgb(255, 225, 0);
     color: white;
 }
+.add_task a{
+    color: white;
+}
+.add_task:hover {
+    background-color: #a58c01;
+}
+
 .task_table{
     display: flex;
     margin-right:10px;
@@ -323,7 +333,7 @@
 }
 
 .progress {
-    background-color: #28a745;
+    background-color: rgb(255, 225, 0);
     height: 100%;
     border-radius: 10px;
     transition: width 0.3s;
@@ -396,7 +406,7 @@ body {
 
 
 /*боковая понель*/
-.sidebar {
+.sidebar_a{
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.085);
     color: black;
@@ -419,7 +429,8 @@ body {
 }
 
 .sidebar ul li a {
-    color: black;
+    width: 200px;
+    color: rgb(255, 225, 0);
     text-decoration: none;
     font-size: 18px;
     display: block;
@@ -429,7 +440,7 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #0135a5;
+    background-color: #a58c01;
 }
 
 .content {
