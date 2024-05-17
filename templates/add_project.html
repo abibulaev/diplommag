@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% block link%}
+<link rel="stylesheet" href="../static/css/add_project.css">
 {% endblock%}
 
 {% block title %}Создание задачи{% endblock %}
@@ -23,6 +24,10 @@
             <div class="form-group">
                 <label for="project-end-date">Срок выполнения</label>
                 <input type="date" id="project-end-date" name="project-end-date" required>
+            </div>
+            <div class="form-group">
+                <label for="task-file">Загрузить файл</label>
+                <input type="file" id="task-file" name="task-file">
             </div>
             <button type="submit" class="submit-btn">Создать проект</button>
         </form>

@@ -1,200 +1,70 @@
-*{
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
 
-    margin: auto;
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.create-task-btn {
+    padding: 10px 20px;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.cta-btn a{
     text-decoration: none;
-    font-family: "Outfit", sans-serif;
-}
-/*навигация*/
-.header{
-    display: flex;
-    margin-top: 15px;
-    background-color: #ffffff;
-    
-}
-.nav_menu{
-    display: flex;
-    list-style-type: none;
-
-}
-.nav_menu li{
-    margin-left: 50px;
-}
-.nav_towork{
-   
-    float: right;
+    color: #333;
 }
 
-.btn_towork {
-	display: inline-block;	
-	box-sizing: border-box;
-	padding: 0 25px;
-	margin: 0 15px 15px 0;
-	outline: none;
-	border: 1px solid #fff;
-	border-radius: 50px;
-	height: 46px;
-	line-height: 46px;
-	font-size: 14px;
-	font-weight: 600;
-	text-decoration: none;
-	color: #ffffff;
-	background-color: #2d2d2d;
-	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
-	cursor: pointer;
-	user-select: none;
-	appearance: none;
-	touch-action: manipulation;  
-	vertical-align: top;
-	transition: box-shadow 0.2s;
+.about, .contact {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #fff;
 }
-.btn_towork:focus-visible {
-	border: 1px solid #4c51f9;
-	outline: none;
-}
-.btn_towork:hover {
-	transition: all 0.2s;
-	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
-}
-.btn_towork:active {
-	background-color: #808080;
-}
-/*block1*/
-.block1{
-    display: flex;
-    width: auto;
-    height: auto;
-    box-shadow: -1px -3px 20px rgba(0, 0, 0, 0.5); /* Параметры тени */
-    padding: 10px;
-    
-    
-}
-.text_block1{
-margin-left: 150px;
-}
-.text_block1_1{
-    color: #000000;
-    font-size: 4vw;
-    width: 50%;
-    font-weight: bolder;
-    
-}
-.text_block1_2{
-    width: 50%;
-   color: #8e8e8e;
-   font-size: 1vw;
-    font-weight: lighter;
-}
-.img_block1_1{
-    width: 50%;
-    height: 50%;
-    margin-right: 300px;
-   
-}
-/*block2*/
-.block2{
-    margin-top: 2px;
-    display: flex;
-    width: auto;
-    height: auto;
-    box-shadow: -1px -3px 20px rgba(0, 0, 0, 0.5); /* Параметры тени */
-    padding: 10px;
-}
-.img_block2_2{
-    width: 50%;
-    height: 50%;
-    margin-left: 400px;
-}
-.block2_content{
-    margin-left: 150px; 
-    
-    
-}
-.text_title_block2{
-    font-weight: bolder;
-    font-size: 2vw;
-    width: 50%;
-}
-.text_block2{
-    width: 50%;
-    color: #8e8e8e;
-    font-size: 1vw;
-     font-weight: lighter;
-}
-.btn_block2{
-    margin-left:250px;
-    margin-top: 10px;
-}
-/*block3*/
-.block3{
-    display: flex;
-}
-/*левая колонка 3 блока*/
-.block3_left_content{
-margin-left: 210px;
-}
-.block3_title{
-    font-weight: bolder;
-    font-size: 2vw;
-    width: 55%;
-}
-.block3_data{
-    display: flex;
-    font-size: 2vw;
-    text-shadow:
-    1px 1px 0 rgb(0, 0, 0),
-    1px -1px 0 rgb(0, 0, 0),
-    -1px 1px 0 rgb(0, 0, 0),
-    -1px -1px 0 rgb(0, 0, 0);
-  color: rgb(190, 190, 190);
-  transition: all 1s;
-  margin-top: 10px;
-}
-.data_survey1{
-    margin-left: 150px;
-}
-.data_survey2{
-    margin-right: 150px;
-}
-.block3_res{
-    display: flex;
-    color: #8e8e8e;
-    font-size: 1vw;
-     font-weight: lighter;
-}
-.data_res1{
-    margin-left: 150px;
-}
-.data_res2{
-    margin-right:100px ;
-}
-.img_block3_3{
-    width: 50%;
-    height: 50%;
-    margin-left: 150px;
-    margin-top: 10px;
-}
-/*провая колонка 3 блока*/
-.block3_right_content{
-    width: 50%;
-    margin-right: 150px;
-    margin-top: 50px;
-    
-    
-}
-.block3_right_block1{
-    display: flex;
-}
-.block3_text1{
-    width: 50%;
-    margin-right: 100px;
-}
-.block3_text1_1{
-    font-weight: bolder;
-    font-size: 1vw;
-}
-.block3_text1_2{
-    display: flex;
-    color: #8e8e8e;
-    font-size: 1vw;
-     font-weight: lighter;
+
+.about h2, .contact h2 {
+    margin-top: 0;
 }

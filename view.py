@@ -3,7 +3,7 @@ from flask import render_template
 
 @app.route('/',methods=['GET', 'POST'])
 def main():
-    return render_template("main.html")
+    return render_template("landing.html")
 
 @app.route('/tasktable',methods=['GET', 'POST'])
 def tasktable():
@@ -31,3 +31,6 @@ def epiccard():
 @app.route("/addepic", methods=['GET','POST'])
 def addepic():
     return render_template("addepic.html")
+@app.route("/add_project", methods=['GET','POST'])
+def addproject():
+    return render_template("add_project.html")
