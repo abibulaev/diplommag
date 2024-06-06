@@ -4,6 +4,7 @@
     font-family: "Outfit", sans-serif;
 }
 .main_page{
+    height: 99%;
     display: flex;
 }
 /* боковая панель: данные о пользователе*/
@@ -262,10 +263,12 @@
 }
 /*рабочая зона приложения*/
 .work_zona{
+    height: 100%;
     background-color:rgba(0, 0, 0, 0.085);
     border-radius: 5px;
     margin-left: 10px;
     width: 881px;
+    overflow-y: scroll;
 }
 .nav_ticket{
     display: flex;

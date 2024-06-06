@@ -12,14 +12,13 @@
     <div class="main_page"> 
         <div class="sidebar">
             <div class="user-panel">
-                <img src="user-avatar.png" alt="User Avatar" class="user-avatar">
+                <img src="../static/img/avatar_user.png" alt="User Avatar" class="user-avatar">
                 <div class="user-info">
-                    <p class="user-name">Abibulaev Lenur</p>
-                    <p class="user-id">id_man</p>
+                    <p class="user-name">{{ user.username }}</p>
                 </div>
                 <div class="user-icons">
                     <span class="icon">&#128276;</span> <!-- Bell Icon -->
-                    <span class="icon">&#10145;</span> <!-- Exit Icon -->
+                    <a href="/logout"><span class="icon">&#10145;</span></a> <!-- Exit Icon -->
                 </div>
             </div>
             <div class="aside">
