@@ -111,6 +111,8 @@ header {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    height: 500px;
 }
 
 .tasks-list h2 {
@@ -130,4 +132,21 @@ header {
 
 .task-item p {
     margin: 5px 0;
+}
+.expand-button {
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: rgb(255, 225, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.expand-button:hover {
+    background-color: #a58c01;
+}
+.epic-cont{
+    margin: 15px;
 }

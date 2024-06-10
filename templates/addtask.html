@@ -9,16 +9,26 @@
     <form class="task-form">
         <h2>Добавить задачу</h2>
         <div class="form-group">
-            <label for="project-title">Название проекта</label>
-            <input type="text" id="project-title" name="project-title" required>
-        </div>
-        <div class="form-group">
             <label for="project-title">Цель</label>
-            <input type="text" id="project-title" name="project-title" required>
+            <select id="project-title" name="project-title" required>
+                <option value="">--Выберите цель--</option>
+                <option value="user1">Проектирование</option>
+                <option value="user2">Дизайн</option>
+                <option value="user3">Фронт</option>
+                <option value="user4">Бэк</option>
+                <!-- Добавьте больше опций по необходимости -->
+            </select>
         </div>
         <div class="form-group">
-            <label for="manager-name">Имя руководителя</label>
-            <input type="text" id="manager-name" name="manager-name" required>
+            <label for="manager-name">Имя испольнителя</label>
+            <select id="manager-name" name="manager-name" required>
+                <option value="">--Выберите исполнителя--</option>
+                <option value="user1">Иван Иванов</option>
+                <option value="user2">Мария Петрова</option>
+                <option value="user3">Алексей Сидоров</option>
+                <option value="user4">Ольга Кузнецова</option>
+                <!-- Добавьте больше опций по необходимости -->
+            </select>
         </div>
         <div class="form-group">
             <label for="task-title">Название задачи</label>
