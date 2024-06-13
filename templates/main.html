@@ -11,7 +11,7 @@
     {% endblock %}
 </head>
 <body>
-    <div class="main_page"> 
+    <div class="main_page" style="position: relative;"> 
         <div class="sidebar">
             <div class="user-panel">
                 <img src="../static/img/avatar_user.png" alt="User Avatar" class="user-avatar">
@@ -61,8 +61,17 @@
     </div>
     {%block content%}
     {%endblock%}    
-   
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <form action="">
+                <span id="closePopupBtn" class="close-btn">&times;</span>
+                <h2>Подключение</h2>
+                <input type="text" placeholder="Введите код проекта">
+                <button style="margin-top: 10px;">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/add_project.js"></script>
+    <script src="../static/js/team.js"></script>
 </body>
-<script src="../static/js/taskcard.js"></script>
-
 </html>

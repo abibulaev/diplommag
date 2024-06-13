@@ -4,6 +4,8 @@
 {% endblock%}
 
 {% block title %}Создание задачи{% endblock %}
+{%block script%}
+{% endblock %}
 {% block body %}
 <div class="main-content">
     <div class="project-form">
@@ -32,6 +34,11 @@
             <button type="submit" class="submit-btn">Создать проект</button>
         </form>
     </div>
+    <div class="conect_project">
+        <button id="openPopupBtn">Подключиться к проекту</button>
+    </div>
 </div>
 
+
+<script src="../static/js/taskcard.js"></script>
 {%endblock%}  
