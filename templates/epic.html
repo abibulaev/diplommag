@@ -1,10 +1,10 @@
-{% extends 'main.html' %}
+{% extends 'project.html' %}
 {% block link%}
 <link rel="stylesheet" href="../static/css/epic.css">
 {% endblock%}
 
 {% block title %}IT-planer{% endblock %}
-{% block body %}
+{% block bodyproject %}
 <div class="progress-container">
     <label for="progress-bar">Прогресс выполнения целей:</label>
     <div class="progress-bar" id="progress-bar">
@@ -44,8 +44,5 @@
     </div>
     <!-- Повторите блок member-card для других участников -->
 </div>
-
-
-
 
 {% endblock %}
