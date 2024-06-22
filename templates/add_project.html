@@ -10,7 +10,7 @@
 <div class="main-content">
     <div class="project-form">
         <h1>Создание проекта</h1>
-        <form action="#" method="post">
+        <form action="#" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="project-name">Название проекта</label>
                 <input type="text" id="project-name" name="project-name" required>
@@ -21,11 +21,11 @@
             </div>
             <div class="form-group">
                 <label for="project-start-date">Дата начала</label>
-                <input type="date" id="project-start-date" name="project-start-date" required>
+                <input type="date" min="{{date}}" id="project-start-date" name="project-start-date" required>
             </div>
             <div class="form-group">
                 <label for="project-end-date">Срок выполнения</label>
-                <input type="date" id="project-end-date" name="project-end-date" required>
+                <input type="date" min="{{date}}" id="project-end-date" name="project-end-date" required>
             </div>
             <div class="form-group">
                 <label for="task-file">Загрузить файл</label>

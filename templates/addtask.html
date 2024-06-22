@@ -1,33 +1,34 @@
-{% extends 'main.html' %}
+{% extends 'project.html' %}
 {% block link%}
 <link rel="stylesheet" href="..//static/css/forms.css">
 {% endblock%}
 
 {% block title %}Создание задачи{% endblock %}
-{% block body %}
+{% block bodyproject %}
 <div class="task-form-container">
-    <form class="task-form">
+    <form class="task-form" method="post" enctype="multipart/form-data">
         <h2>Добавить задачу</h2>
         <div class="form-group">
             <label for="project-title">Цель</label>
             <select id="project-title" name="project-title" required>
                 <option value="">--Выберите цель--</option>
-                <option value="user1">Проектирование</option>
-                <option value="user2">Дизайн</option>
-                <option value="user3">Фронт</option>
-                <option value="user4">Бэк</option>
-                <!-- Добавьте больше опций по необходимости -->
+                {% for epic in epics %}
+                    <option value="{{ epic.id }}" 
+                            data-start-date="{{ epic.start_date }}" 
+                            data-end-date="{{ epic.end_date }}">
+                        {{ epic.title }}
+                    </option>
+                {% endfor %}
             </select>
         </div>
         <div class="form-group">
-            <label for="manager-name">Имя испольнителя</label>
+            <label for="manager-name">Имя исполнителя</label>
             <select id="manager-name" name="manager-name" required>
                 <option value="">--Выберите исполнителя--</option>
-                <option value="user1">Иван Иванов</option>
-                <option value="user2">Мария Петрова</option>
-                <option value="user3">Алексей Сидоров</option>
-                <option value="user4">Ольга Кузнецова</option>
-                <!-- Добавьте больше опций по необходимости -->
+                <option value="{{ project.teamlead_id }}">{{ project.teamlead.username }}</option>
+                {% for i in project.team %}
+                    <option value="{{ i.id }}">{{ i.username }}</option>
+                {% endfor %}
             </select>
         </div>
         <div class="form-group">
@@ -57,4 +58,29 @@
         <button type="submit">Добавить</button>
     </form>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const epicSelect = document.getElementById('project-title');
+        const taskDeadline = document.getElementById('task-deadline');
+
+        epicSelect.addEventListener('change', function() {
+            const selectedOption = epicSelect.options[epicSelect.selectedIndex];
+            const startDate = selectedOption.getAttribute('data-start-date');
+            const endDate = selectedOption.getAttribute('data-end-date');
+
+            if (startDate) {
+                taskDeadline.min = startDate;
+            } else {
+                taskDeadline.removeAttribute('min');
+            }
+
+            if (endDate) {
+                taskDeadline.max = endDate;
+            } else {
+                taskDeadline.removeAttribute('max');
+            }
+        });
+    });
+</script>
 {% endblock %}

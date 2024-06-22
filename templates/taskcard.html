@@ -1,30 +1,51 @@
-{% extends 'main.html' %}
+{% extends 'project.html' %}
 {% block link%}
 <link rel="stylesheet" href="../static/css/taskcard.css">{% endblock%}
 
 {% block title %}IT-planer{% endblock %}
-{% block body %}
+{% block bodyproject %}
 <div class="main-content">
     <div class="task-details">
-        <h1>Название задачи: Разработка веб-страницы</h1>
-        <p>Описание: Создание страницы для отображения информации о задаче с использованием HTML и CSS.</p>
-        <p>Дата начала: 15 мая 2024</p>
-        <p>Срок выполнения: 20 мая 2024</p>
-        <p>Статус: В процессе</p>
+        <h1>Название задачи: {{ task.title }}</h1>
+        <p>Описание: {{ task.description }}</p>
+        <p>Срок выполнения: {{ task.end_date }}</p>
+        <p>Статус: {{ task.status }}</p>
+        <p>Время затраченное на выполнение: 
+            {% if task.time_spent() %}
+                {{ task.time_spent().days }} дней {{ task.time_spent().seconds // 3600 }} часов {{ (task.time_spent().seconds // 60) % 60 }} минут
+            {% else %}
+                Задача ещё не завершена
+            {% endif %}
+        </p>
     </div>
     <div class="file-upload">
-        <h2>Загрузка файлов</h2>
-        <input type="file" id="fileInput" multiple>
+        <h2>Файл</h2>
+        {% if task.file_url %}
+            <a href="{{ url_for('download', filename=task.file_url) }}"">Скачать</a>
+        {% else %}
+            Файл отсутствует
+        {% endif %}
     </div>
     <div class="comments-section">
         <div class="manage_task">
-            <button class="to_task" >Приступить к задаче</button>
-            <button class="fin_task" >Закрыть задачу</button>
+            {% if task.status == "Поставлена" %}
+            <a href="/changestatus?project_id={{ project.id }}&task_id={{ task.id }}&status=proceed" class="to_task" >Приступить к задаче</a>
+            {% elif task.status == 'Выполняется' %}
+            <a href="/changestatus?project_id={{ project.id }}&task_id={{ task.id }}&status=close" class="fin_task" >Закрыть задачу</a>
+            {% endif %}
         </div>
-        <h2>Комментарии</h2>
-        <textarea id="commentText" placeholder="Оставьте ваш комментарий"></textarea>
-        <button id="submitComment">Добавить комментарий</button>
-        <div id="commentsList"></div>
+        <form action="" method="post">
+            <h2>Комментарии</h2>
+            <textarea id="commentText" name="comment_text" placeholder="Оставьте ваш комментарий"></textarea>
+            <button type="submit" id="submitComment">Добавить комментарий</button>
+        </form>
+        <div id="commentsList">
+            {% for com in comments %}
+            <div>
+                {{ com.text }}
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

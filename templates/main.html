@@ -31,11 +31,9 @@
                         <a href="/add_project"><img src="../static/img/free-icon-add-7222864.png" alt=""></a>
                     </div>
                     <ul>
-                        <li><a href="/project">Проект 1</a></li>
-                        <li><a href="#">Проект 2</a></li>
-                        <li><a href="#">Проект 3</a></li>
-                        <li><a href="#">Проект 4</a></li>
-                        <li><a href="#">Проект 5</a></li>
+                        {% for i in projects %}
+                            <li><a href="/project?project_id={{i.id}}">{{i.name}}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -50,10 +48,10 @@
     {%endblock%}    
     <div id="popup" class="popup">
         <div class="popup-content">
-            <form action="">
+            <form action="" method="post">
                 <span id="closePopupBtn" class="close-btn">&times;</span>
                 <h2>Подключение</h2>
-                <input type="text" placeholder="Введите код проекта">
+                <input type="text" placeholder="Введите код проекта" name="invite_code">
                 <button style="margin-top: 10px;">Submit</button>
             </form>
         </div>

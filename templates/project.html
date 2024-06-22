@@ -8,16 +8,18 @@
 <div class="work_zona">
     <div class="nav_ticket">
         <div class="ticket">
-            <div class="tasks"><a href="/tasktable">Задачи</a></div>
-            <div class="projects"><a href="/epictable">Цели</a></div>
-            <div class="report"><a href="/team">Команда</a></div>
+            <div class="tasks"><a href="/project/tasktable?project_id={{project.id}}">Задачи</a></div>
+            <div class="projects"><a href="/project/epictable?project_id={{project.id}}">Цели</a></div>
+            <div class="report"><a href="/project/team?project_id={{project.id}}">Команда</a></div>
         </div>
+        {% if project.teamlead_id == user.id %}
         <div class="add_epic">
-            <a href="/addepic">Создать цель</a>
+            <a href="/project/addepic?project_id={{project.id}}">Создать цель</a>
         </div>
         <div class="add_task">
-            <a href="/addtask">Создать задачу</a>
+            <a href="/project/addtask?project_id={{project.id}}">Создать задачу</a>
         </div>
+        {% endif %}
     </div>
 
     {% block bodyproject %}

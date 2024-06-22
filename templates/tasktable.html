@@ -7,63 +7,63 @@
     <div class="progress-container">
         <label for="progress-bar">Прогресс выполнения задач:</label>
         <div class="progress-bar" id="progress-bar">
-            <div class="progress" style="width: 60%;"></div>
+            <div class="progress" style="width: {{ progress_percentage }}%;"></div>
         </div>
-        <span class="progress-percentage">60%</span>
+        <span class="progress-percentage">{{ progress_percentage }}%</span>
+    </div>
+    <div class="file-upload">
+        <h2>Файл</h2>
+        {% if project.file_url %}
+            <a href="{{ url_for('download', filename=project.file_url) }}"">Скачать</a>
+        {% else %}
+            Файл отсутствует
+        {% endif %}
     </div>
     <div class="board">
         <div class="column">
             <h2>To do</h2>
-            <div class="task-card">
-                <h3><a href="/taskcard">Задача 1</a></h3>
-                <p>Описание задачи</p>
-                <div class="task-info">
-                    <p><strong>Проект:</strong> Проект Alpha</p>
-                    <p><strong>Важность:</strong> Высокая</p>
-                    <p><strong>Исполнитель:</strong> Иванов Иван</p>
-                    <p><strong>Комментарии:</strong> 3</p>
-                    <p><strong>Файлы:</strong> 2</p>
-                </div>
-            </div>
-            <div class="task-card">
-                <h3>Задача 2</h3>
-                <p>Описание задачи</p>
-                <div class="task-info">
-                    <p><strong>Проект:</strong> Проект Beta</p>
-                    <p><strong>Важность:</strong> Средняя</p>
-                    <p><strong>Исполнитель:</strong> Петров Петр</p>
-                    <p><strong>Комментарии:</strong> 1</p>
-                    <p><strong>Файлы:</strong> 0</p>
-                </div>
-            </div>
+            {% for i in tasks %}
+                {% if i.status == "Поставлена" %}
+                    <div class="task-card">
+                        <h3><a href="/project/taskcard?project_id={{ project.id }}&task_id={{ i.id }}">Задача {{  i.title }}</a></h3>
+                        <p>Описание задачи</p>
+                        <div class="task-info">
+                            <p><strong>Проект:</strong> {{ i.epics[0].title }}</p>
+                            <p><strong>Важность:</strong> {{ i.priority }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
         <div class="column">
             <h2>In progress</h2>
-            <div class="task-card">
-                <h3>Задача 3</h3>
-                <p>Описание задачи</p>
-                <div class="task-info">
-                    <p><strong>Проект:</strong> Проект Gamma</p>
-                    <p><strong>Важность:</strong> Низкая</p>
-                    <p><strong>Исполнитель:</strong> Сидоров Сидор</p>
-                    <p><strong>Комментарии:</strong> 0</p>
-                    <p><strong>Файлы:</strong> 1</p>
+            {% for i in tasks %}
+            {% if i.status == "Выполняется" %}
+                <div class="task-card">
+                    <h3><a href="/project/taskcard?project_id={{ project.id }}&task_id={{ i.id }}">Задача {{  i.title }}</a></h3>
+                    <p>Описание задачи</p>
+                    <div class="task-info">
+                        <p><strong>Проект:</strong> {{ i.epics[0].title }}</p>
+                        <p><strong>Важность:</strong> {{ i.priority }}</p>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
+        {% endfor %}
         </div>
         <div class="column">
             <h2>Done</h2>
-            <div class="task-card">
-                <h3>Задача 4</h3>
-                <p>Описание задачи</p>
-                <div class="task-info">
-                    <p><strong>Проект:</strong> Проект Delta</p>
-                    <p><strong>Важность:</strong> Высокая</p>
-                    <p><strong>Исполнитель:</strong> Смирнов Смирн</p>
-                    <p><strong>Комментарии:</strong> 2</p>
-                    <p><strong>Файлы:</strong> 3</p>
-                </div>
-            </div>
+            {% for i in tasks %}
+                {% if i.status == "Закрыта" %}
+                    <div class="task-card">
+                        <h3><a href="/project/taskcard?project_id={{ project.id }}&task_id={{ i.id }}">Задача {{  i.title }}</a></h3>
+                        <p>Описание задачи</p>
+                        <div class="task-info">
+                            <p><strong>Проект:</strong> {{ i.epics[0].title }}</p>
+                            <p><strong>Важность:</strong> {{ i.priority }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 
