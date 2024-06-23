@@ -3,7 +3,7 @@ import requests
 
 
 FLASK_APP_URL = 'http://127.0.0.1:5000'
-API_TOKEN = '7488250784:AAFNq46e23WHYBNZvFH0uGh9wPD3MKsRqTY'
+API_TOKEN = '6908416351:AAEnNj32A2k7NKbFBmVILiz7YNtV1F-3qlY'
 bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start'])

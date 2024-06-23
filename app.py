@@ -13,8 +13,8 @@ db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.init_app(app)
 
-TELEGRAM_AUTH_URL = 'https://telegram.me/ItPlaner_bot?start=auth'
-SEND_URL = f'https://api.telegram.org/bot7488250784:AAFNq46e23WHYBNZvFH0uGh9wPD3MKsRqTY/sendMessage'
+TELEGRAM_AUTH_URL = 'https://telegram.me/KipushkaBot?start=auth'
+SEND_URL = f'https://api.telegram.org/bot6908416351:AAEnNj32A2k7NKbFBmVILiz7YNtV1F-3qlY/sendMessage'
 
 
 def send_notification(chat_id, message):
